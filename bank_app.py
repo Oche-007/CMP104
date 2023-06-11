@@ -6,12 +6,12 @@ class BankApp(tk.Tk):
         self.title("Bank App")
 
         # Initialize account balances
-        self.savings_balance = 1000
-        self.current_balance = 500
+        self.savings_balance = 1000000
+        self.current_balance = 50000
 
         # Create widgets
-        self.savings_label = tk.Label(self, text="Savings Account Balance: ${}".format(self.savings_balance))
-        self.current_label = tk.Label(self, text="Current Account Balance: ${}".format(self.current_balance))
+        self.savings_label = tk.Label(self, text="Savings Account Balance: ₦{}".format(self.savings_balance))
+        self.current_label = tk.Label(self, text="Current Account Balance: ₦{}".format(self.current_balance))
         self.amount_label = tk.Label(self, text="Amount:")
         self.amount_entry = tk.Entry(self)
         self.savings_deposit_button = tk.Button(self, text="Savings Deposit", command=self.savings_deposit)
@@ -65,8 +65,8 @@ class BankApp(tk.Tk):
         return amount
 
     def update_balances(self):
-        self.savings_label.config(text="Savings Account Balance: ${}".format(self.savings_balance))
-        self.current_label.config(text="Current Account Balance: ${}".format(self.current_balance))
+        self.savings_label.config(text="Savings Account Balance: ₦{}".format(self.savings_balance))
+        self.current_label.config(text="Current Account Balance: ₦{}".format(self.current_balance))
 
 if __name__ == "__main__":
     app = BankApp()
